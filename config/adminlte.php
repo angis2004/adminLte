@@ -333,6 +333,12 @@ return [
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
+// agregado
+        [
+            'text' => 'Pagina',
+            'url' => 'pagina',
+            'icon' => 'fas fa-file-word',
+        ],
         [
             'text' => 'change_password',
             'url' => 'admin/settings',
