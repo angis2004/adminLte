@@ -1,3 +1,10 @@
+
+/* Reset de CSS (para que se vea igual en todos los navegadores).
+Estilos básicos para elementos HTML (h1, p, a, etc.). */
 @tailwind base;
+
+/* Carga componentes reutilizables de Tailwind. */
 @tailwind components;
+
+/* Carga todas las clases de utilidad de Tailwind. Sin necesidad de escribir CSS manualmente.*/
 @tailwind utilities;

@@ -15,6 +15,11 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+{{-- agregado css --}}
+
+
+
+
 </head>
 <body>
     <div id="app">
