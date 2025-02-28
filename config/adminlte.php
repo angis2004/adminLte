@@ -364,7 +364,7 @@ return [
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
-// agregado
+        // agregado
         [
             'text' => 'Productos',
             'url' => 'pagina',
@@ -442,22 +442,22 @@ return [
 
 
 
-    //     ['header' => 'labels'],
-    //     [
-    //         'text' => 'important',
-    //         'icon_color' => 'red',
-    //         'url' => '#',
-    //     ],
-    //     [
-    //         'text' => 'warning',
-    //         'icon_color' => 'yellow',
-    //         'url' => '#',
-    //     ],
-    //     [
-    //         'text' => 'information',
-    //         'icon_color' => 'cyan',
-    //         'url' => '#',
-    //     ],
+        //     ['header' => 'labels'],
+        //     [
+        //         'text' => 'important',
+        //         'icon_color' => 'red',
+        //         'url' => '#',
+        //     ],
+        //     [
+        //         'text' => 'warning',
+        //         'icon_color' => 'yellow',
+        //         'url' => '#',
+        //     ],
+        //     [
+        //         'text' => 'information',
+        //         'icon_color' => 'cyan',
+        //         'url' => '#',
+        //     ],
     ],
 
     /*
@@ -495,6 +495,9 @@ return [
     */
 
     'plugins' => [
+
+
+
         'Datatables' => [
             'active' => false,
             'files' => [
@@ -562,6 +565,17 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
+                ],
+            ],
+        ],
+
+        'AdminCustomCSS' => [ 
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'css/admin_custom.css',
                 ],
             ],
         ],
