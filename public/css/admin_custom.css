@@ -1,3 +1,15 @@
+
+.content-header h1,.row{
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 0px;/* margin-bottom: 1rem; */
+}
+.btn-danger{
+    height: 30px;
+    text-align: center;
+}
 .custom-border-top {
     border-top: 3px solid black !important;
 }
@@ -34,4 +46,94 @@ margin-top: 20px;
 /* Hover en el scrollbar */
 .scrollbar-container::-webkit-scrollbar-thumb:hover {
     background-color: #331ad6 !important;
+}
+
+
+.menu-icon-administracion{
+    background: url('/img/administracion.png') no-repeat center center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.menu-icon-caja{
+    background: url('/img/caja.png') no-repeat center center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.menu-icon-entrada{
+    background: url('/img/entrada.png') no-repeat center center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+
+.menu-icon-productos{
+    background: url('/img/productos.png') no-repeat center center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+
+
+
+
+.img{
+
+    /* display: inline-block; */
+    background: #fff;
+    width:90%;
+    height:40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.datos-table td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+.icon-table{
+    text-align: center !important;
+    height: 100% !important;
+}
+
+
+
+.navbar{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+
+}
+
+.table-dropdown select{
+    border: none;
+    background: none;
+    border-color: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+option .resaltado2:hover {
+   background: red !important;
+}
+
+.table-time input{
+    border: none;
+    background: none;
 }

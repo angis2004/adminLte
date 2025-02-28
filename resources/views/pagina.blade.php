@@ -8,6 +8,7 @@
 
 {{-- 👉 Es la cabecera del contenido principal (encabezado de la página). --}}
 @section('content_header')
+
     <h1>Nueva Pagina </h1>
 <form>
 
@@ -28,7 +29,7 @@
 
     <div class="col-md-3">
         <div class="form-group">
-      <button type="submit" class="btn btn-danger">PDF O EXCEL XD?</button>
+            <button type="button" class="btn btn-primary btn-sm">PDF</button>
     </div>
     </div>
 </div>
@@ -48,27 +49,24 @@
 
   <div class="table-responsive">
 
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand">Show</a>
+    <nav class="navbar">
+    <div class="filterEntries">
+        <div class="entries">
+            Show
+                <select name="" id="table_size">
+                <option >1</option>
+                <option >2</option>
+                <option >3</option>
+                <option >...</option>
+            </select> entries
+        </div>
+    </div>
 
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-             Seleccione
-            </button>
-            <ul class="dropdown-menu">
-              <li><button class="dropdown-item" type="button">1sasdsa</button></li>
-              <li><button class="dropdown-item" type="button">2</button></li>
-              <li><button class="dropdown-item" type="button">3</button></li>
-            </ul>
-          </div>
-
-          <form class="d-flex" role="search">
+        <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
-        </div>
-      </nav>
+        </nav>
       </div>
 
 
@@ -81,42 +79,90 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Foto</th>
-            <th scope="col">Clientes</th>
-            <th scope="col">Fecha Venta</th>
-            <th scope="col">Hora</th>
-            <th scope="col">Total</th>
-            <th scope="col">PDF</th>
-
+            <th scope="col">Producto</th>
+            {{-- 🔹 💰 P → Es el precio al que se vende el producto al cliente. --}}
+            <th scope="col">Precio</th>
+            <th scope="col">Stock Disponible</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Estado</th>
+            {{-- 🔹 💲cc → Es el precio que la tienda paga al proveedor por cada unidad del producto. --}}
+            <th scope="col">Costo de Compra</th>
+            <th scope="col">Fecha de Ingreso</th>
+            <th scope="col">Acciones</th>
           </tr>
         </thead>
         <tbody class="custom-border-top">
-          <tr>
+          <tr class="datos-table">
             <th scope="row">1</th>
-            <td>Mardddddddddddddddddddddddddddddddddddddddddddddddddddk</td>
-            <td>Ottdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddo</td>
-            <td>@mdo</td>
-            <td>Mardddddddddddddddddddddkdss</td>
-            <td>Ottdddddddddddo</td>
-            <td>@mdo</td>
-
+            <td>
+                <img src="{{ asset("http://localhost/adminLte/public/img/embutido.png") }}"  class="img">
+            </td>
+            <td>Pack Jamón Pizza BRAEDT Queso Edam Paquete 370g</td>
+            <td> S/10.00</td>
+            <td>25 unidades</td>
+            <td>
+                <div class="table-dropdown">
+                    <select name="" id="table_size">
+                        <option >Embutidos </option>
+                        <option >Lacteos</option>
+                        <option >Conservas</option>
+                        <option >Dulces</option>
+                    </select>
+                </div>
+            </td>
+            <td>
+                <div class="table-dropdown">
+                    <select name="" id="table_size">
+                        <option value="10">Disponible </option>
+                        <option value="20">Agotado</option>
+                    </select>
+                </div>
+            </td>
+            <td>S/7.50</td>
+            <td>
+                <div class="table-time">
+                    <input type="date" value="<?php echo date ('y-m-d'); ?>" name=" desde " id="min">
+                </div>
+            </td>
+            <td class="icon-table">
+                <i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-trash-alt"></i>
+            </td>
           </tr>
-          <tr>
+          <tr class="datos-table">
             <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>
+                <img src="{{ asset("http://localhost/adminLte/public/img/lacteo.png") }}"  class="img">
+            </td>
+            <td>Yogurt VAKIMU +Pro Sabor Arándanos Pote 500g</td>
+            <td>S/12.50</td>
+            <td>40 unidades</td>
+            <td>Lácteos</td>
+            <td>Disponible</td>
+            <td>S/9.00</td>
+            <td>25/02/2025</td>
+            <td class="icon-table">
+                <i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-trash-alt"></i>
+            </td>
           </tr>
-          <tr>
+          <tr class="datos-table">
             <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td>@twitter</td>
-            <td>@twitter</td>
-            <td>@twitter</td>
-
+            {{-- <td colspan="2">Larry the Bird</td> --}}
+            <td>
+                <img src="{{ asset("http://localhost/adminLte/public/img/conservas.png") }}"  class="img">
+            </td>
+            <td>Filete de Atún FLORIDA en Agua 110kcal Lata 140g</td>
+            <td>S/12.50 </td>
+            <td>30 unidades</td>
+            <td>Conservas</td>
+            <td>Disponible</td>
+            <td>S/5.50 </td>
+            <td>25/02/2025</td>
+            <td class="icon-table">
+                <i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-trash-alt"></i>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -148,7 +194,7 @@
 
 {{-- 👉 Aquí va el contenido principal de la página. --}}
 @section('content')
-    <p>Hola Bienvenido a Pagina xd.</p>
+
 @stop
 
 {{-- 👉  agregar archivos CSS personalizados. --}}

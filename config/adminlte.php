@@ -311,42 +311,81 @@ return [
         ],
 
         // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
+        // [
+        //     'type' => 'sidebar-menu-search',
+        //     'text' => 'search',
+        // ],
         [
             'text' => 'blog',
             'url' => 'admin/blog',
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'pages',
+            'text' => 'Administracion',
             'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
+            'icon' => 'menu-icon-administracion',
+            'submenu' => [
+                [
+                    'text' => 'level_one',
+                    'url' => '#',
+                ],
+
+                [
+                    'text' => 'level_two',
+                    'url' => '#',
+                ],
+            ],
+
         ],
-        ['header' => 'account_settings'],
+        // ['header' => 'account_settings'],
+
+
         [
-            'text' => 'profile',
+            'text' => 'Cajas',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'menu-icon-caja',
+            'submenu' => [
+                [
+                    'text' => 'level_one',
+                    'url' => '#',
+                ],
+
+                [
+                    'text' => 'level_two',
+                    'url' => '#',
+                ],
+            ],
+        ],
+
+
+        [
+            'text' => 'Clientes',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
 // agregado
         [
-            'text' => 'Pagina',
+            'text' => 'Productos',
             'url' => 'pagina',
-            'icon' => 'fas fa-file-word',
+            // 'icon' => 'fas fa-file-word',
+            'icon' => 'menu-icon-productos',
+            // 'submenu' => [
+            //     [
+            //         'text' => 'level_one',
+            //         'url' => '#',
+            //     ],
+
+            //     [
+            //         'text' => 'level_two',
+            //         'url' => '#',
+            //     ],
+            // ],
         ],
+
         [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text' => 'multilevel',
-            'icon' => 'fas fa-fw fa-share',
+            'text' => 'Entradas',
+            'icon' => 'menu-icon-entrada',
             'submenu' => [
                 [
                     'text' => 'level_one',
@@ -382,22 +421,43 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
+
+
         [
-            'text' => 'important',
-            'icon_color' => 'red',
-            'url' => '#',
+            'text' => 'Salidas',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'level_one',
+                    'url' => '#',
+                ],
+
+                [
+                    'text' => 'level_two',
+                    'url' => '#',
+                ],
+            ],
         ],
-        [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
-            'url' => '#',
-        ],
-        [
-            'text' => 'information',
-            'icon_color' => 'cyan',
-            'url' => '#',
-        ],
+
+
+
+
+    //     ['header' => 'labels'],
+    //     [
+    //         'text' => 'important',
+    //         'icon_color' => 'red',
+    //         'url' => '#',
+    //     ],
+    //     [
+    //         'text' => 'warning',
+    //         'icon_color' => 'yellow',
+    //         'url' => '#',
+    //     ],
+    //     [
+    //         'text' => 'information',
+    //         'icon_color' => 'cyan',
+    //         'url' => '#',
+    //     ],
     ],
 
     /*

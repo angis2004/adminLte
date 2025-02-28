@@ -13,4 +13,8 @@ Route::get('pagina', function(){
 });
 
 
+Route::get('tito', function(){
+    return view('tito');
+   });
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
